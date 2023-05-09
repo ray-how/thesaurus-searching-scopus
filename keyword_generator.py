@@ -1,6 +1,4 @@
 import logging
-import argparse
-import os
 import sys
 import pyperclip
 
@@ -12,7 +10,7 @@ from data_struct import Data_struct
 
 def run():
     logging.basicConfig(level=logging.INFO)
-    
+
     clipboard_text = pyperclip.paste()
 
     clipboard_text = clipboard_text.replace("\r", "")

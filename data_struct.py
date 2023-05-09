@@ -56,23 +56,6 @@ class Data_struct:
 
         return length, len(self._in_data)
 
-    # def delete_blank_rows_and_columns(self):
-    #     amount_table_row, amount_table_column = self.get_table_dimensions_and_check()
-    #     for current_row in range(amount_table_row):
-    #         if self.in_data["HEAD"][current_row] == "":
-    #
-    #             for j in range(amount_table_column):
-    #
-    #                 # check if the complete row is a blank row
-    #                 if self.in_data[j][current_row] != "":
-    #                     self.in_data["HEAD"][current_row] = "TITLE-ABS-KEY"
-    #                     logging.info(f"There is some keywords in row {current_row+1}, which don't have a defined search scope. Default search scope 'TITLE-ABS-KEY' has been added.")
-    #                     break
-    #
-    #                 # if yes, delete the row
-    #                 for key in self.in_data.keys():
-    #                     self.in_data[key].pop(current_row)
-    #
 
     def reorganize(self):
         amount_table_row, amount_table_column = self.get_table_dimensions_and_check()
