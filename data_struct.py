@@ -36,11 +36,19 @@ class Data_struct:
             word_list = word_comb.split()
             if len(word_list) > 1:
                 new_words = "( " + word_list[0]
+                inside_of_quotation_marks = False
                 for i in range(len(word_list) - 1):
+
+                    # Do not add "AND" operator inside of a pair of quotation marks
+                    if word_list[i].startswith("\""):
+                        inside_of_quotation_marks = True
+                    if word_list[i].endswith("\""):
+                        inside_of_quotation_marks = False
+
                     # Do not add "AND" operator after "NOT" operator.
-                    if new_words[i].upper != "NOT":
-                        new_words = new_words + " AND "
-                    new_words = new_words + word_list[i + 1]
+                    if word_list[i].upper() != "NOT" and not inside_of_quotation_marks:
+                        new_words = new_words + " AND"
+                    new_words = new_words + " " + word_list[i + 1]
                 new_words = new_words + " )"
             else:
                 new_words = word_list[0]

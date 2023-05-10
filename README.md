@@ -37,7 +37,7 @@ This is my first work and first publication on GitHub, any feedback would be gre
 Example output for given keyword table in the given example:
 
 ```
-TITLE ( Numeric* OR Model* OR Simulation OR FE OR FEM OR FEA OR Analy* OR Mathematic* ) AND TITLE ( ( Powder AND bed ) OR Additive OR ( Selective AND laser ) OR PBF OR SLM OR ALM OR LPBF OR LBM ) AND TITLE-ABS-KEY ( ( heat AND source* ) OR ( Heat AND input ) ) 
+TITLE ( Numeric* OR Model* OR Simulation OR FE OR FEM OR FEA OR Analy* OR Mathematic* ) AND TITLE ( ( "Powder bed" ) OR Additive OR ( Selective AND laser ) OR PBF OR SLM OR ALM OR LPBF OR LBM ) AND TITLE-ABS-KEY ( ( heat AND source* ) OR ( "Heat input" ) ) 
 ```
 
 ## Requirements
